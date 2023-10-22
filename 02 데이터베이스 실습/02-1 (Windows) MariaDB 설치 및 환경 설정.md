@@ -11,7 +11,7 @@ mariadb-install-db --help
 >명령 프롬프트 관리자 권한으로 실행
 
 ```bash
-mariadb-install-db -S (서비스 이름을 지정) -p (비밀번호)
+mariadb-install-db -S {서비스 이름을 지정} -p {비밀번호}
 ```
 - mariadb-install-db : MariaDB를 초기화하고 데이터베이스를 생성
 - -S : MariaDB 서버를 Windows 서비스로 설치하고, 그 서비스의 이름을 지정하기 위해 사용되는 옵션
@@ -25,19 +25,19 @@ mariadb-install-db -S (서비스 이름을 지정) -p (비밀번호)
 #### 서비스 시작
 
 ```bash
-sc start (서비스 이름)
+sc start {서비스 이름}
 ```
 
 #### 서비스 중지
 
 ```bash
-sc stop (서비스 이름)
+sc stop {서비스 이름}
 ```
 
 #### 서비스의 상태 정보 조회
 
 ```bash
-sc query (서비스 이름)
+sc query {서비스 이름}
 ```
 
 ## 데이터베이스 접속
@@ -65,7 +65,7 @@ show databases;
 #### 현재 작업할 데이터베이스 선택
 
 ```mysql
-use (데이터베이스 이름)
+use {데이터베이스 이름}
 ```
 
 #### 현재 선택한 데이터베이스 내에 있는 모든 테이블의 이름 반환
