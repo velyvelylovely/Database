@@ -34,3 +34,5 @@ MariaDB [testdb1]> show tables;
 ```
 
 실행할 문장을 드래그를 하고 Ctrl + Enter를 하면 해당 쿼리가 실행됩니다.
+
+![image](https://github.com/velyvelylovely/Database/assets/98696925/d8628d62-85ff-45df-b29d-06e9d76fc701)
