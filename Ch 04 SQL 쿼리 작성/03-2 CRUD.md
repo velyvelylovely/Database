@@ -48,7 +48,7 @@ ADD CONSTRAINT pk_member PRIMARY KEY (email);
 
 ![image](https://github.com/velyvelylovely/Database/assets/98696925/10d7c7d4-496b-4c5d-8704-d63f29d47f72)
 
-그러나 현재 테이블은 같은 이메일 주소가 중복되기 때문에 `PK`를 지정할 수 없으므로 에러가 발생합니다.
+그러나 현재 테이블에 입력된 데이터는 같은 이메일 주소가 중복되기 때문에 `PK`를 지정할 수 없으므로 에러가 발생합니다.
 
 그래서 기존의 `member` 테이블을 삭제하고, `PK`를 지정한 새로운 테이블을 생성해 보겠습니다.
 
@@ -73,3 +73,6 @@ ADD CONSTRAINT pk_member PRIMARY KEY (email);
 ```mysql
 alter table member drop primary key;
 ```
+
+## UPDATE
+
