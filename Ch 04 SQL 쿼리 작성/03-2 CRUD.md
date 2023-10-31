@@ -68,7 +68,7 @@ ADD CONSTRAINT pk_member PRIMARY KEY (email);
 
 ### PK(Primary Key) 제거
 
-`member` 테이블의 `PK`를 제거하려면 아래 명령어를 사용합니다. 이렇게 하면 `PK`는 제거되지만 데이터는 그대로 남아 있습니다.
+`member` 테이블의 `PK`를 제거하려면 아래 명령어를 사용합니다. `PK`는 제거되지만 데이터는 그대로 남아 있습니다.
 
 ```mysql
 alter table member drop primary key;
@@ -76,3 +76,36 @@ alter table member drop primary key;
 
 ## UPDATE
 
+`UPDATE`는 데이터베이스의 기존 레코드를 수정하는 데 사용되는 명령어입니다. 이 명령어를 사용하면 테이블에서 하나 이상의 컬럼 값을 변경할 수 있습니다.
+
+먼저 `member`테이블에 데이터를 추가하고 다음 명령어를 실행하여 `marketing_yn` 를 `false`로 `UPDATE`해보겠습니다.
+
+```mysql
+update member
+set
+    marketing_yn = false;
+```
+
+![image](https://github.com/velyvelylovely/Database/assets/98696925/1cbd21c7-7ccb-407b-9ecb-55829f1c35d5)
+
+그럼 **Unsafe query: 'Update' statement without 'where' updates all table rows at once** 라는 메세지가 뜨는데 이 내용은 조건이 없는 업데이트는 모든 데이터를 변경하기 때문에 위험하다는 메세지 입니다. 
+
+Execute 를 클릭하면 전체 `marketing_yn`가 `false`로 바뀌는 것을 확인할 수 있습니다. 
+
+![image](https://github.com/velyvelylovely/Database/assets/98696925/2dfb7c90-36d4-40c5-a34a-7ce11c51e370)
+
+### where 조건
+
+`UPDATE` 문을 사용할 때에는 조건을 지정할 수 있습니다. `WHERE` 절을 사용하여 `test@naver.com` 이메일 주소를 가진 사용자의 정보만 변경할 수 있습니다.
+
+```mysql
+update member
+set
+    marketing_yn = false
+    , register_date = now()
+    , password = '1111'
+where email = 'test@naver.com';
+```
+
+>[!NOTE]
+>`INSERT` 문과는 달리, `UPDATE`와 `DELETE` 문에서는 조건을 지정할 수 있음
