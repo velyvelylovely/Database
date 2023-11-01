@@ -8,9 +8,9 @@ CRUD를 SQL 명령어를 통해 직접 실습해 보겠습니다.
 
 ## INSERT
 
-`INSERT`는 새로운 데이터를 생성하거나 추가하는 작업을 말합니다. 예를 들어, 새로운 사용자 계정을 만드는 것이 이에 해당합니다.
+`INSERT`는 데이터베이스에 새로운 데이터를 생성하거나 추가하는 작업을 말합니다. 예를 들어, 새로운 사용자 계정을 만드는 것이 이에 해당합니다.
 
-DataGrip 툴을 사용하여 이전에 생성한 `testdb1` 데이터베이스를 선택하고 `member` 테이블에 다음의 SQL 쿼리를 실행하여 새로운 데이터를 생성해 보겠습니다.
+DataGrip 툴을 사용하여 이전에 생성한 `testdb1` 데이터베이스를 선택하고 `member` 테이블에 아래의 `INSERT` 문을 실행하여 새로운 데이터를 생성해 보겠습니다.
 
 ```mysql
 insert into member
@@ -94,7 +94,7 @@ Execute 를 클릭하면 전체 `marketing_yn`가 `false`로 바뀌는 것을 �
 
 ![image](https://github.com/velyvelylovely/Database/assets/98696925/2dfb7c90-36d4-40c5-a34a-7ce11c51e370)
 
-### where 조건
+### WHERE 조건
 
 `UPDATE` 문을 사용할 때에는 조건을 지정할 수 있습니다. `WHERE` 절을 사용하여 `test@naver.com` 이메일 주소를 가진 사용자의 정보만 변경할 수 있습니다.
 
@@ -109,3 +109,6 @@ where email = 'test@naver.com';
 
 >[!NOTE]
 >`INSERT` 문과는 달리, `UPDATE`와 `DELETE` 문에서는 조건을 지정할 수 있음
+
+## DELETE
+
