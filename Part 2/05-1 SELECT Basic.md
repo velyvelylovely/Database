@@ -15,7 +15,7 @@
 ```sql
 SELECT attribute(s)
 FROM table(s)
-	[WHERE condition(s)]
+    [WHERE condition(s)]
 ;
 ```
 
@@ -26,7 +26,7 @@ FROM table(s)
 ```sql
 SELECT employee.id, employee.name, position 
 FROM project, employee
-	WHERE project.id = 2002 and project.leader_id = employee.id
+    WHERE project.id = 2002 and project.leader_id = employee.id
 ;
 ```
 
