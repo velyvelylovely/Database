@@ -4,6 +4,8 @@ SQL이란 Structured Query Language의 약자로, '구조화된 질의 언어'�
 
 ### SQL 주요 용어
 
+![image](https://github.com/velyvelylovely/Database/assets/98696925/9b0b5bd4-f1a2-4d8d-9973-4c11d954aaf5)
+
 SQL을 이해하기 위해서는 몇 가지 주요 용어를 알아야 합니다. 우선, 관계형 데이터 모델에서 '관계(Relation)'는 SQL에서 '테이블(Table)'이라는 개념으로 대응됩니다. 그리고 '속성(Attribute)'은 '열(Column)', '튜플(Tuple)'은 '행(Row)', '도메인(Domain)'은 SQL에서도 동일하게 '도메인(Domain)'으로 사용됩니다.
 
 ### SQL에서 Relation이란?
