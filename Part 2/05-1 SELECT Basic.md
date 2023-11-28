@@ -21,6 +21,8 @@ FROM table(s)
 
 실제 적용을 위해 project 테이블과 employee 테이블에서 데이터를 조회하는 예시를 보겠습니다.
 
+![image](https://github.com/velyvelylovely/Database/assets/98696925/9f075d41-9049-4872-baaa-3697bab069f5)
+
 ```sql
 SELECT employee.id, employee.name, position 
 FROM project, employee
