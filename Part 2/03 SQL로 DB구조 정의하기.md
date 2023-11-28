@@ -164,8 +164,8 @@ CREATE TABLE PLAYER(
 
 ```sql
 CREATE TABLE PLAYER (
-   team_id VARCHAR(12),
-   back_number INT,
+    team_id VARCHAR(12),
+    back_number INT,
     ...
     UNIQUE (team_id, back_number)
 );
