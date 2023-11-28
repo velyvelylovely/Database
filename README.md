@@ -4,8 +4,14 @@
 
 ### Part 1
 
-Part 1에서는 DBMS(Database Management System) 중 하나인 MariaDB를 사용하였으며, 데이터베이스 관리 도구로는 DataGrip을 활용하였습니다.
+| DBMS | DB Tool |
+| --- | --- |
+| MariaDB | DataGrip |
 
 ### Part 2
 
 [쉬운코드](https://www.youtube.com/playlist?list=PLcXyemr8ZeoREWGhhZi5FZs6cvymjIBVe)
+
+| DBMS | 
+| --- | 
+| MySQL | 
