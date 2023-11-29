@@ -17,6 +17,7 @@ insert into member
 (name, email, mobile_no, password, marketing_yn, register_date)
 values
 ('apple', 'test@naver.com', '01011111111', '1234', true, now())
+;
 ```
 
 >[!NOTE]
@@ -43,7 +44,8 @@ values
 
 ```mysql
 ALTER TABLE member
-ADD CONSTRAINT pk_member PRIMARY KEY (email);
+ADD CONSTRAINT pk_member PRIMARY KEY (email)
+;
 ```
 
 ![image](https://github.com/velyvelylovely/Database/assets/98696925/10d7c7d4-496b-4c5d-8704-d63f29d47f72)
@@ -71,7 +73,8 @@ ADD CONSTRAINT pk_member PRIMARY KEY (email);
 `member` 테이블의 `PK`를 제거하려면 아래 명령어를 사용합니다. `PK`는 제거되지만 데이터는 그대로 남아 있습니다.
 
 ```mysql
-alter table member drop primary key;
+alter table member drop primary key
+;
 ```
 
 ## UPDATE
@@ -83,7 +86,8 @@ alter table member drop primary key;
 ```mysql
 update member
 set
-    marketing_yn = false;
+    marketing_yn = false
+;
 ```
 
 ![image](https://github.com/velyvelylovely/Database/assets/98696925/1cbd21c7-7ccb-407b-9ecb-55829f1c35d5)
@@ -104,7 +108,8 @@ set
     marketing_yn = false
     , register_date = now()
     , password = '1111'
-where email = 'test@naver.com';
+where email = 'test@naver.com'
+;
 ```
 
 >[!NOTE]
@@ -121,5 +126,6 @@ where 삭제조건
 ;
 ```
 
+![image](https://github.com/velyvelylovely/Database/assets/98696925/7ec942e2-1fe0-4fd2-a69f-7568b918aa10)
 
 
