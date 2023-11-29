@@ -12,7 +12,7 @@ FROM employees AS e
 
 위의 예시에서 'employees' 테이블에 'e'라는 Alias을 지정하고, 'name' 컬럼에 'employee_name', 'position' 컬럼에 'job_title'이라는 Alias을 지정했습니다.
 
-## 애스터리스크(*)
+## Asterisk(*)
 
 SQL에서 `*`는 '모든 컬럼'을 의미합니다. 특정 테이블의 모든 컬럼을 선택하려면 '*'를 사용할 수 있습니다.
 
