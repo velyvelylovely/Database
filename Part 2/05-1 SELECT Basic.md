@@ -90,6 +90,7 @@ FROM employee AS E, works_on AS W, project AS P
 | --- | --- |
 | 2002 | 확장성 있게 백엔드 리팩토링 |
 | 2003 | 홈페이지 UI 개선 |
+| ~~2003~~ | ~~홈페이지 UI 개선~~ |
 
 ## `LIKE`
 
@@ -106,6 +107,14 @@ FROM employee
 ;
 ```
 
+**쿼리 실행 결과**
+
+| name |
+| --- |
+| BROW`N` |
+| JOH`N` |
+| `N`ICOLE |
+
 또는, 이름에 'NG'가 포함된 직원을 찾고 싶다면 아래와 같이 작성할 수 있습니다.
 
 ```sql
@@ -115,6 +124,13 @@ FROM employee
 ;
 ```
 
+**쿼리 실행 결과**
+
+| name |
+| --- |
+| DI`NG`YO |
+| JISU`NG` |
+
 또는, 이름이 'J'로 시작하고 길이가 4인 직원을 찾고 싶다면 아래와 같이 작성할 수 있습니다.
 
 ```sql
@@ -122,5 +138,52 @@ SELECT name FROM employee WHERE name LIKE 'J___'
 ;
 ```
 
-이처럼 `LIKE`는 다양한 문자열 패턴을 표현하여 원하는 데이터를 검색하는 데 유용한 도구입니다.
+**쿼리 실행 결과**
+
+| name |
+| --- |
+| `J`ANE |
+| `J`OHN |
+
+### escape 문자와 함께 LIKE 사용하기
+
+`LIKE` 키워드를 사용할 때, 특정 문자열이 `%`로 시작하거나 `_`로 끝나는 경우를 찾고 싶을 때에는 어떻게 해야 할까요? 이때 사용하는 것이 escape 문자입니다. 
+
+예를 들어, 프로젝트 이름이 `%`로 시작하거나 `_`로 끝나는 경우를 찾고 싶다면, 아래와 같이 쿼리를 작성할 수 있습니다.
+
+```sql
+SELECT name FROM project WHERE name LIKE '\%%' or name LIKE '%\_';
+```
+
+위의 쿼리에서 백슬래시(`\`)는 escape 문자로, 뒤따라오는 특수 문자를 일반 문자로 해석하게 합니다. 
+
+### LIKE 정리
+
+| 항목 | 설명 |
+| --- | --- |
+| LIKE | 문자열 패턴 매칭에 사용 |
+| reserved character | % : 0개 이상의 임의의 문자를 의미, _ : 하나의 문자를 의미 |
+| escape character | \ : 예약 문자를 escape시켜서 문자 본연의 문자로 사용하고 싶을 때 사용 |
+
+## * (asterisk)
+
+`*`(asterisk)는 SQL에서 모든 속성(Attribute)를 선택할 때 사용하는 기호입니다. 즉, 선택된 튜플의 모든 속성을 보여주고 싶을 때 사용합니다.
+
+```sql
+SELECT * FROM employee WHERE id = 9
+;
+```
+
+위의 쿼리는 `employee` 테이블에서 `id`가 9인 직원의 모든 정보를 조회하는 쿼리입니다.
+
+## SELECT without WHERE
+
+`WHERE` 절 없이 `SELECT`문을 사용하면, 테이블에 있는 모든 튜플을 반환합니다. 
+
+## 주의사항
+
+1. `SELECT`로 데이터를 조회할 때, 특정 조건을 포함하여 조회한다면, 해당 조건과 관련된 속성에 인덱스(Index)가 있어야 합니다. 그렇지 않으면 데이터가 많아질수록 조회 속도가 느려집니다.
+    1. 예: `SELECT * FROM employee WHERE position = 'dev_back';`
+2. 위의 내용은 MySQL 기준으로 작성되었습니다.
+3. 지금까지 설명한 내용은 `SELECT`와 관련하여 중요하고 기본적인 내용들을 담고 있습니다. 그 외에도 다양한 조회 기능들과 세부 사항들이 존재합니다.
 
