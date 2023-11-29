@@ -38,9 +38,11 @@ WHERE id = DSTNCT_E.empl_id;
 
 ## EXISTS
 
-서브쿼리가 바깥쪽 쿼리의 속성을 참조할 때, 이를 상호 연관된 서브쿼리(correlated subquery)라고 합니다. 
+`EXISTS`와 `NOT EXISTS`는 서브쿼리의 결과에 따라 `TRUE` 또는 `FALSE`를 반환하는 키워드입니다. 
 
-`EXISTS`는 서브쿼리의 결과가 최소 하나의 행(row)라도 존재하는 경우 `TRUE`를 반환합니다.
+`EXISTS`는 서브쿼리가 최소 하나의 행을 반환하는 경우 `TRUE`를 반환합니다. 이는 "서브쿼리의 조건을 만족하는 데이터가 존재하느냐?"를 확인하는 것입니다.
+
+예를 들어, 아래의 쿼리는 `project` 테이블에서 직원 번호가 7번 또는 12번인 직원이 참여한 프로젝트의 id와 이름을 조회하는 쿼리입니다.
 
 ```sql
 SELECT P.id, P.name
@@ -49,12 +51,13 @@ WHERE EXISTS (
 	SELECT *
 	FROM works_on W
 	WHERE W.proj_id = P.id AND W.empl_id IN (7, 12)
-	);
+);
 ```
-
 ## NOT EXISTS
 
-`NOT EXISTS`는 `EXISTS`의 반대 개념으로, 서브쿼리의 결과가 단 하나의 행도 없는 경우 `TRUE`를 반환합니다.
+`NOT EXISTS`는 `EXISTS`의 반대 개념으로, 서브쿼리가 하나의 행도 반환하지 않는 경우 `TRUE`를 반환합니다. 즉, "서브쿼리의 조건을 만족하는 데이터가 존재하지 않느냐?"를 확인하는 것입니다.
+
+아래의 쿼리는 `department` 테이블에서 2000년 1월 1일 이후에 태어난 직원이 한 명도 없는 부서의 id와 이름을 조회하는 쿼리입니다.
 
 ```sql
 SELECT D.id, D.name
@@ -63,8 +66,10 @@ WHERE NOT EXISTS (
 	SELECT *
 	FROM employee E
 	WHERE E.dept_id = D.id AND E.birth_date >= "2000-01-01"
- );
+);
 ```
+
+이 두 예제에서, 서브쿼리는 외부 쿼리의 `P.id`와 `D.id`를 참조하고 있기 때문에, 이들은 상호 연관된 서브쿼리(correlated subquery)라고 부릅니다. 이는 서브쿼리의 실행이 외부 쿼리의 각각의 행에 의존하기 때문입니다.
 
 ## ANY
 
