@@ -152,7 +152,8 @@ SELECT name FROM employee WHERE name LIKE 'J___'
 예를 들어, 프로젝트 이름이 `%`로 시작하거나 `_`로 끝나는 경우를 찾고 싶다면, 아래와 같이 쿼리를 작성할 수 있습니다.
 
 ```sql
-SELECT name FROM project WHERE name LIKE '\%%' or name LIKE '%\_';
+SELECT name FROM project WHERE name LIKE '\%%' or name LIKE '%\_'
+;
 ```
 
 위의 쿼리에서 백슬래시(`\`)는 escape 문자로, 뒤따라오는 특수 문자를 일반 문자로 해석하게 합니다. 
