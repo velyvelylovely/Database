@@ -92,7 +92,7 @@ FROM employee AS E, works_on AS W, project AS P
 | 2003 | 홈페이지 UI 개선 |
 | ~~2003~~ | ~~홈페이지 UI 개선~~ |
 
-## `LIKE`
+## LIKE
 
 `LIKE`는 문자열 패턴 매칭에 사용되는 키워드입니다. 즉, 특정 패턴을 가진 문자열을 찾고 싶을 때 사용할 수 있습니다. 
 
