@@ -126,7 +126,7 @@ where 삭제조건
 ;
 ```
 
-![image](https://github.com/velyvelylovely/Database/assets/98696925/7ec942e2-1fe0-4fd2-a69f-7568b918aa10)
+![image](https://github.com/velyvelylovely/Database/assets/98696925/e9296314-98b6-45da-812d-157657b2c3d7)
 
 ## SELECT 
 
@@ -139,6 +139,7 @@ WHERE 조건
 ;
 ```
 
+![image](https://github.com/velyvelylovely/Database/assets/98696925/dd9edb77-202b-4cf2-a570-38be0bf368ce)
 
 
 
