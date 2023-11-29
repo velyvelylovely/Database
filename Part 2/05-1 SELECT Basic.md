@@ -1,4 +1,4 @@
-## SELECT로 데이터 조회하기
+## [SELECT로 데이터 조회하기](https://www.youtube.com/watch?v=dTBwgWMUguE&list=PLcXyemr8ZeoREWGhhZi5FZs6cvymjIBVe&index=6)
 
 데이터베이스에서 원하는 데이터를 추출하는 방법을 알아보겠습니다. 예를 들어, ID가 9인 임직원의 이름과 직급을 알고 싶다면 어떻게 해야 할까요? 이때 사용하는 것이 바로 `SELECT`문입니다.
 
@@ -8,7 +8,7 @@
 
 따라서 `SELECT`로 데이터를 조회할 때는 선택 조건을 통해 데이터를 필터링하고, 그 중에서 투영 속성에 의해 지정된 필드에 해당하는 값만을 가져옵니다.
 
-### SELECT statement
+### SELECT 문 사용 방법
 
 `SELECT`문의 기본 구조는 아래와 같습니다.
 
