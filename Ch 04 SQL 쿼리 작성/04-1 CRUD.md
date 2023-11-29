@@ -126,8 +126,6 @@ where 삭제조건
 ;
 ```
 
-![image](https://github.com/velyvelylovely/Database/assets/98696925/e9296314-98b6-45da-812d-157657b2c3d7)
-
 ## SELECT 
 
 SELECT 문은 데이터베이스에서 원하는 데이터를 조회하거나 추출할 때 사용하는 구문입니다.
@@ -138,8 +136,3 @@ FROM 출력 대상 컬럼들이 있는 테이블명
 WHERE 조건
 ;
 ```
-
-![image](https://github.com/velyvelylovely/Database/assets/98696925/dd9edb77-202b-4cf2-a570-38be0bf368ce)
-
-
-
