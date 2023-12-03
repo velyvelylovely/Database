@@ -75,8 +75,6 @@ WHERE NOT EXISTS (
 
 `ANY`는 서브쿼리가 반환하는 결과 중 어느 하나라도 특정 조건을 만족하면 `TRUE`를 반환합니다. 
 
-예를 들어, 아래의 쿼리는 각 부서의 리더 중에서 자신이 받는 급여가 자신의 부서 직원 중 어느 한 사람의 급여보다 적은 사람이 있다면, 그 리더의 id, 이름, 급여, 그리고 부서의 최대 급여를 조회하는 쿼리입니다.
-
 ```sql
 SELECT E.id, E.name, E.salary,
 	(
@@ -95,8 +93,6 @@ WHERE D.leader_id = E.id AND E.salary < ANY (
 ## ALL
 
 `ALL` 키워드는 서브쿼리가 반환하는 모든 결과가 특정 조건을 만족할 때 `TRUE`를 반환합니다.
-
-아래의 쿼리는 ID가 13인 직원이 참여하지 않은 모든 프로젝트에 참여한 직원의 id, 이름, 직위를 조회하는 쿼리입니다.
 
 ```sql
 SELECT DISTINCT E.id, E.name, E.position
