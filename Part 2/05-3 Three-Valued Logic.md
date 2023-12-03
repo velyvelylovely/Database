@@ -1,4 +1,4 @@
-## SQL에서 NULL의 의미
+## [SQL에서 NULL의 의미](https://www.youtube.com/watch?v=y_7rOoOodCY&list=PLcXyemr8ZeoREWGhhZi5FZs6cvymjIBVe&index=8)
 
 SQL에서 NULL은 특별한 의미를 지니며, 주로 아래 세 가지 상황에서 사용됩니다.
 
