@@ -25,8 +25,6 @@ FROM employee_view;
 
 이제 뷰를 삭제하는 방법에 대해 알아보겠습니다. 뷰를 삭제하려면 DROP VIEW 문을 사용하면 됩니다. 
 
-다음은 'employee_view' 뷰를 삭제하는 SQL문입니다.
-
 ```sql
 DROP VIEW employee_view;
 ```
